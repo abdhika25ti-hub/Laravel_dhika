@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/font_gua.ttf'); /* Pakai relatif path ../fonts/ */
+}
+
+.font_gua {
+    font-family: 'MyCustomFont', sans-serif !important;
+}

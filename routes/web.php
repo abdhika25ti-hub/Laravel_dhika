@@ -17,3 +17,12 @@ Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+//Redirect
+Route::get('/', [HomeController::class, 'index']);
+
+Route::post('question/store', [QuestionController::class, 'store'])->name('question.store');
+
+Route::get('question/response', [QuestionController::class, 'response'])->name('question.response');
+
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

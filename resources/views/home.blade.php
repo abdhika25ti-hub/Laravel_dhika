@@ -7,7 +7,7 @@
     <title>My Laravel App</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom-style.css') }}">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -159,9 +159,22 @@
             </div>
 
             <div class="col-md-6">
+                <div class="text-center mb-3">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" width="100">
+                </div>
+
+                <h2 class="font_gua text-center mb-4"> Di isi yaa</h2>
+                
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Form Pertanyaan</h5>
+
+                        @if (session('info'))
+                            <div class="alert alert-info">
+                                {{ session('info') }}
+                            </div>
+                        @endif
+
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -171,11 +184,13 @@
                                 </ul>
                             </div>
                         @endif
+
                         <form action="{{ route('question.store') }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" name="nama" value="{{ old('nama') }}">
+                                <input type="text" class="form-control" name="nama"
+                                    value="{{ old('nama') }}">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
@@ -184,7 +199,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                                <textarea class="form-control" rows="4" name="pertanyaan" value="{{ old('pertanyaan') }}"></textarea>
+                                <textarea class="form-control" rows="4" name="pertanyaan">{{ old('pertanyaan') }}</textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
                         </form>
