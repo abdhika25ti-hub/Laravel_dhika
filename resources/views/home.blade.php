@@ -164,7 +164,7 @@
                 </div>
 
                 <h2 class="font_gua text-center mb-4"> Di isi yaa</h2>
-                
+
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Form Pertanyaan</h5>
