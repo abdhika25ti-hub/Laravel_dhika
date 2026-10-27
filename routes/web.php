@@ -7,6 +7,7 @@ use App\http\Controllers\HomeController;
 use App\http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\PortofolioController;
 
 
 // Route::get('/', function () {
@@ -30,3 +31,5 @@ Route::get('question/response', [QuestionController::class, 'response'])->name('
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
+
+Route::resource('portofolio', PortofolioController::class);
