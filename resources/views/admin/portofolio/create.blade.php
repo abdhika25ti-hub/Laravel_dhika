@@ -81,7 +81,7 @@
                                 <input type="file" class="form-control" name="foto" accept="image/*">
                             </div>
 
-                           
+
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('portofolio.index') }}" class="btn btn-secondary">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan Data</button>

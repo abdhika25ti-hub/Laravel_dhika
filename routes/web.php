@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\http\Controllers\Controllers;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
@@ -33,3 +34,5 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('portofolio', PortofolioController::class);
+
+Route::resource('users', UserController::class);
