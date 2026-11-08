@@ -433,7 +433,7 @@
                                 <div class="col-md-4 mb-3">
                                     <label for="phone" class="form-label">Phone</label>
                                     <input type="text" id="phone" name="phone"
-                                        class="form-control @error('phone') is-invalid @enderror"   
+                                        class="form-control @error('phone') is-invalid @enderror"
                                         value="{{ old('phone') }}">
                                     @error('phone')
                                         <div class="invalid-feedback">{{ $message }}</div>
